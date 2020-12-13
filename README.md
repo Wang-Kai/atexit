@@ -36,7 +36,7 @@ func main() {
 }
 ```
 
-```
+```console
 $ go run atexit_demo.go
 Process running at PID: 24831
 ```
@@ -44,7 +44,7 @@ Process running at PID: 24831
 
 At that time, open the second terminal, send `SIGINT(2)` or `SIGTERM(15)` to process.
 
-```
+```console
 kill -2 24831
 ```
 
