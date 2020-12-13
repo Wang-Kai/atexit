@@ -4,7 +4,7 @@
 
 ## How to use
 
-Define and registry your atexit function, after program running, it prints PID. 
+Define and registry your atexit function
 
 ```go
 package main
@@ -38,11 +38,12 @@ func main() {
 
 ```console
 $ go run atexit_demo.go
+
 Process running at PID: 24831
 ```
 
 
-At that time, open the second terminal, send `SIGINT(2)` or `SIGTERM(15)` to process.
+Open the second terminal, send `SIGINT(2)` or `SIGTERM(15)` to process.
 
 ```console
 kill -2 24831
@@ -52,6 +53,7 @@ The atexit function will be called before process exit.
 
 ```console
 $ go run atexit_demo.go
+
 Process running at PID: 24831
 PID 24831 receives signal: interrupt
 Bye ...
