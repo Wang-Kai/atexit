@@ -21,13 +21,13 @@ import (
 func main() {
 	fmt.Printf("Process running at PID: %d\n", os.Getpid())
 
-    // define atexit function
+        // define atexit function
 	hook := func() error {
 		println("Bye ...")
 		return nil
 	}
 
-    // registry function
+        // registry function
 	atexit.Exec(hook)
 
 	if err := http.ListenAndServe(":8080", nil); err != nil {
